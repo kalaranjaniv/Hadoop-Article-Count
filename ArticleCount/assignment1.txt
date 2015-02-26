@@ -1,0 +1,29 @@
+arg1 - input file
+arg2 -> keyword 
+
+Job 1
+-------
+Map input -> key title, value ->content 
+
+output -> key ->id
+	  value->title+content
+
+Job 2
+------
+
+Map input -> key->id
+	     value ->title+content
+
+Output -> key->search keyword
+	  value->1 ( for each occurence)
+
+Reducer -> sum up the values of the count and produce the pair
+  	  Key->search keyword
+	  value -> total count
+
+
+Job 1 (Mapper )
+
+inout ->file,searchterm
+output -> articleid, one 
+combiner output -> "Count" "value of each articleid
